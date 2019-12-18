@@ -52,22 +52,22 @@ This should update target directory `/build_dir/ ... /ath` to match the remote r
 #### Replacing stock firmware with OpenWrt
 
 1. Prepare your custom-built firmware binary, or [Download pre-built OpenWrt image](http://downloads.openwrt.org/releases/18.06.5/targets/ar71xx/generic/openwrt-18.06.5-ar71xx-generic-archer-c7-v4-squashfs-factory.bin)
-  * Rename it to something shorter like factory.bin.
+    * Rename it to something shorter like factory.bin.
 
 2. From the stock web interface, find the "Manual Upgrade" under Advanced \> System Tools \> Firmware Upgrade.
-  * The web interface is available at the gateway address. For example, http://192.168.1.1/
-  * If the "Manual Upgrade" item doesn't exist, you may need to update your firmware to the latest version.
+    * The web interface is available at the gateway address. For example, http://192.168.1.1/
+    * If the "Manual Upgrade" item doesn't exist, you may need to update your firmware to the latest version.
 
 3. Select your prepared binary. The process should proceed automatically.
-  * May take up to 5~10 minutes.
-  * The router should reboot when done. (Indicated by the flashing of all leds)
+    * May take up to 5~10 minutes.
+    * The router should reboot when done. (Indicated by the flashing of all leds)
 
 4. Log into your router running OpenWrt by ssh
-  * `ssh root@192.168.1.1`. If prompted for password, try "toor".
-  * After initial login, set password by typing `passwd`.
+    * `ssh root@192.168.1.1`. If prompted for password, try "toor".
+    * After initial login, set password by typing `passwd`.
 
 5. Install LuCI & Reboot
-  * **Check if LuCI is already installed & running at http://192.168.1.1/cgi-bin/luci**. If so, skip this step.
+    * **Check if LuCI is already installed & running at http://192.168.1.1/cgi-bin/luci**. If so, skip this step.
   ```
   root@OpenWrt# vi /etc/opkg.conf
   (Uncomment everything)
@@ -122,8 +122,8 @@ $ sudo chown -R nobody /tftpboot
 ```
 
 5. Download and put the stock firmware in that directory:
-  * For Archer C7 v4, .zip download available from [here](https://www.tp-link.com/kr/support/download/archer-c7/v4/#Firmware).
-  * Extract and rename firmware to **ArcherC7v4\_tp\_recovery.bin**, and then copy to /tftpboot.
+    * For Archer C7 v4, .zip download available from [here](https://www.tp-link.com/kr/support/download/archer-c7/v4/#Firmware).
+    * Extract and rename firmware to **ArcherC7v4\_tp\_recovery.bin**, and then copy to /tftpboot.
 
 Now the TFTP Server is ready!
 But before actually starting the service, proceed to the following section.
