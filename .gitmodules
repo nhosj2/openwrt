@@ -1,0 +1,3 @@
+[submodule "build_dir/target-mips_24kc_musl/linux-ar71xx_generic/backports-2017-11-01/drivers/net/wireless/ath"]
+	path = build_dir/target-mips_24kc_musl/linux-ar71xx_generic/backports-2017-11-01/drivers/net/wireless/ath
+	url = https://github.com/nhosj2/ath
