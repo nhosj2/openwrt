@@ -1,11 +1,11 @@
 ## SNU 2019-F Computer Network Project
 
-#### Build Guide
+### Build Guide
 
 Refer to: [OpenWrt official build guide](https://openwrt.org/docs/guide-developer/quickstart-build-images)
 
 
-#### Menuconfig Settings (project specific)
+### Menuconfig Settings (project specific)
 
 * Target
   - Target System: Atheros AR7xxx/AR9xxx
@@ -31,7 +31,7 @@ Rename to `./.config` after initial config to apply settings!
 (Also make sure to backup old config file)
 
 
-#### Working with submodule
+### Working with submodule
 
 Motivation: need to maintain atheros driver changes
 
@@ -49,7 +49,7 @@ $ git submodule update
 This should update target directory `/build_dir/ ... /ath` to match the remote repository.
 
 
-#### Replacing stock firmware with OpenWrt
+### Replacing stock firmware with OpenWrt
 
 1. Prepare your custom-built firmware binary, or [Download pre-built OpenWrt image](http://downloads.openwrt.org/releases/18.06.5/targets/ar71xx/generic/openwrt-18.06.5-ar71xx-generic-archer-c7-v4-squashfs-factory.bin)
     * Rename it to something shorter like factory.bin.
@@ -86,7 +86,7 @@ This should update target directory `/build_dir/ ... /ath` to match the remote r
 7. Profit!!
 
 
-#### Recovery from Brick
+### Recovery from Brick
 
 **This solution is TP-Link Archer C7 family specific**
 
